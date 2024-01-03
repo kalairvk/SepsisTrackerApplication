@@ -1,0 +1,324 @@
+<html>
+<head>
+<title>TestNG:  chrome</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>chrome</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>41/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Dec 28 12:15:27 CST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>145 seconds (145950 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validitate Sepsis BloodProfile New Form", "Validitate Sepsis BloodProfile"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on mac (3edf8bc598a63ef26c5a6bee838f2e9a)] -&gt; xpath: //lightning-formatted-text[@slot=&apos;primaryField&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.12.0&apos;, revision: &apos;249f2a7d1b*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.4&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.129, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/r3/5_bhvqb55bq...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49915}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49915/devtoo..., se:cdpVersion: 120.0.6099.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3edf8bc598a63ef26c5a6bee838f2e9a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at driverFactory.AbstractComponents.waitForElementToappear(AbstractComponents.java:26)
+	at pageObjects.SepsisBloodProfile.getLastElementText(SepsisBloodProfile.java:306)
+	at pageObjects.SepsisBloodProfile.getExpectedMsg(SepsisBloodProfile.java:312)
+	at stepDefinitions.SepsisBloodProfileSD.admin_clicks_on_the_save_button_the_form_should_be_saved(SepsisBloodProfileSD.java:83)
+	at ✽.Admin clicks on the save button the form should be saved(file:///Users/kalai/Documents/GitLab/Sepsis-Application/src/test/resources/features/07SepsisBloodProfile.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace183020254", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace183020254'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on mac (3edf8bc598a63ef26c5a6bee838f2e9a)] -&gt; xpath: //lightning-formatted-text[@slot=&apos;primaryField&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.12.0&apos;, revision: &apos;249f2a7d1b*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.4&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.129, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/r3/5_bhvqb55bq...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49915}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49915/devtoo..., se:cdpVersion: 120.0.6099.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3edf8bc598a63ef26c5a6bee838f2e9a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at driverFactory.AbstractComponents.waitForElementToappear(AbstractComponents.java:26)
+	at pageObjects.SepsisBloodProfile.getLastElementText(SepsisBloodProfile.java:306)
+	at pageObjects.SepsisBloodProfile.getExpectedMsg(SepsisBloodProfile.java:312)
+	at stepDefinitions.SepsisBloodProfileSD.admin_clicks_on_the_save_button_the_form_should_be_saved(SepsisBloodProfileSD.java:83)
+	at ✽.Admin clicks on the save button the form should be saved(file:///Users/kalai/Documents/GitLab/Sepsis-Application/src/test/resources/features/07SepsisBloodProfile.feature:11)
+</pre></div></td>
+<td>13</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate loginPage", "SalesforceLoginSepsisapp"</td>
+<td></td>
+<td>6</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the patient information form submission with invalid data for BP", "Validating the New Patient form with Valid/Invalid/MissingData"</td>
+<td></td>
+<td>3</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the patient information form submission with invalid data", "Validating the New Patient form with Valid/Invalid/MissingData"</td>
+<td></td>
+<td>3</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the Allergy Checkbox", "Validitate Existing Morbidities"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate selecting Physical fitness options from available to chosen", "Validitate Existing Morbidities"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validitate Organ Failure in Patient Saved Form", "Validitate Sepsis BloodProfile"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the Surgeries Checkbox", "Validitate Existing Morbidities"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validating the PersonalInfo", "Validating the New Patient information"</td>
+<td></td>
+<td>5</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Glucose Value", "Validating Medication and Vitals Information"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate selecting Habits options from available to chosen", "Validitate Existing Morbidities"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The Patient is logged in to Saleforce app(Sepsis)", "Validating Medication and Vitals Information"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate WBC", "Validating Medication and Vitals Information"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate patient information form submission with valid data for risk of Sepsis", "Validating the New Patient form with Valid/Invalid/MissingData"</td>
+<td></td>
+<td>8</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the International Travel Checkbox", "Validitate Existing Morbidities"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate attendance form submission with valid data for Critical risk", "Validating the New Patient form with Valid/Invalid/MissingData"</td>
+<td></td>
+<td>9</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Immunization DropDown", "Validitate Existing Morbidities"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the patient information form submission with invalid data", "Validating the New Patient form with Valid/Invalid/MissingData"</td>
+<td></td>
+<td>3</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validitate Blood Profile upload files", "Validitate Blood Profile upload files"</td>
+<td></td>
+<td>6</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the Other textbox", "Validitate Existing Morbidities"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Existing Morbidities available to chosen", "Validitate Existing Morbidities"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Glucose", "Validating Medication and Vitals Information"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validating the contactinfo", "Validating the New Patient information"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Respiratory Rate", "Validating Medication and Vitals Information"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate patient information form submission with invalid data", "Validating the New Patient form with Valid/Invalid/MissingData"</td>
+<td></td>
+<td>3</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validating the ProviderInformation", "Validating the New Patient information"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the Undo button on Existing Morbidities", "Validitate Existing Morbidities"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Save Button", "Validating Medication and Vitals Information"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the Other textbox in Existing Infections", "Validitate Existing Morbidities"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate BP", "Validating Medication and Vitals Information"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the patient information form submission with invalid phonefield", "Validating the New Patient form with Valid/Invalid/MissingData"</td>
+<td></td>
+<td>3</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the patient information form submission with invalid character", "Validating the New Patient form with Valid/Invalid/MissingData"</td>
+<td></td>
+<td>3</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate patient information form submission with valid data for risk of Sepsis", "Validating the New Patient form with Valid/Invalid/MissingData"</td>
+<td></td>
+<td>13</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Heart Rate", "Validating Medication and Vitals Information"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validitate Sepsis BloodProfile Saved Form", "Validitate Sepsis BloodProfile"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validating the EmergencyContact", "Validating the New Patient information"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the patient information form submission with missing data", "Validating the New Patient form with Valid/Invalid/MissingData"</td>
+<td></td>
+<td>5</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate selecting Family History options more than one from available to chosen", "Validitate Existing Morbidities"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Temperature", "Validating Medication and Vitals Information"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate selecting Family History left arrow from chosen to available", "Validitate Existing Morbidities"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validating the EmergencyContact", "Validating the New Patient information"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+<tr>
+<td title='runner.TestRunnertestNG.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunnertestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Fitness Frequency DropDown", "Validitate Existing Morbidities"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunnertestNG@563f38c4</td></tr>
+</table><p>
+</body>
+</html>
