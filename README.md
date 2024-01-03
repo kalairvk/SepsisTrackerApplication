@@ -1,1 +1,1 @@
-# SepsisTrackerSalesforceApplication
+# Our Sepsis Infection Tracker is a cutting-edge  application designed to empower both healthcare professionals and individuals in monitoring and managing sepsis infections effectively. Sepsis, a life-threatening condition, requires swift detection and intervention, and our application is engineered to streamline this critical process
